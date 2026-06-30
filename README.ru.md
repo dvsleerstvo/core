@@ -46,8 +46,8 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/<your-username>/dvsleerstvo-web.git
-   cd dvsleerstvo-web
+   git clone https://github.com/dvsleerstvo/core.git
+   cd core
    ```
 
 2. Создайте файл `.env` на основе примера (`.env.example`) и укажите необходимые переменные:

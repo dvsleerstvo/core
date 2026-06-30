@@ -45,8 +45,8 @@ The project is fully dockerized for ease of development.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/dvsleerstvo-web.git
-   cd dvsleerstvo-web
+   git clone https://github.com/dvsleerstvo/core.git
+   cd core
    ```
 
 2. Create a `.env` file from the example (if available) or set the required environment variables:

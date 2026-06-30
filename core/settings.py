@@ -159,7 +159,7 @@ STORAGES = {
             "bucket_name": os.environ.get("S3_BUCKET_NAME", ""),
             "endpoint_url": os.environ.get("S3_ENDPOINT_URL", ""),
             "region_name": os.environ.get("S3_REGION_NAME", ""),
-            "location": "db-backups/",
+            "location": os.environ.get("S3_LOCATION", "db-backups/"),
         },
     },
 }

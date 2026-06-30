@@ -17,7 +17,6 @@ A specialized leaderboard and record tracking system for Geometry Dash players i
 - **Framework**: Svelte 5 (with SvelteKit 2)
 - **Styling**: Vanilla CSS (modularized in `static/css` and `frontend/static/css`)
 - **Mapping**: Leaflet (for regional player distribution)
-- **Charts**: Chart.js (for player/level statistics)
 - **Language**: TypeScript
 
 ## 📂 Project Structure

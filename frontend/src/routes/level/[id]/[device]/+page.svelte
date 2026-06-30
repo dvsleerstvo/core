@@ -7,7 +7,7 @@
   });
 
   const level = $derived(data.level);
-  const isPC = $derived(data.device.toLowerCase() === "pc");
+  const isPC = $derived(data.device?.toLowerCase() === "pc");
 </script>
 
 <svelte:head>
@@ -145,10 +145,10 @@
           <table class="table table-dark table-hover align-middle custom-table">
             <thead>
               <tr>
-                <th class="text-center" width="80">Флаг</th>
+                <th class="text-center" style="width: 80px;">Флаг</th>
                 <th>Игрок</th>
                 <th class="text-center">Прогресс</th>
-                <th class="text-end" width="120">Видео</th>
+                <th class="text-end" style="width: 120px;">Видео</th>
               </tr>
             </thead>
             <tbody>

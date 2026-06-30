@@ -265,7 +265,7 @@
                     src="/img/icons/{encodeURIComponent(p.username)}.png"
                     class="player-icon-mini"
                     onerror={(e) =>
-                      (e.currentTarget.src =
+                      ((e.currentTarget as HTMLImageElement).src =
                         "https://gdbrowser.com/iconkit/premade/cube_1.png")}
                     alt={p.username}
                   />

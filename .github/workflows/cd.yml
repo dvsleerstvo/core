@@ -20,4 +20,4 @@ jobs:
           script: |
             cd /root/core
             git pull
-            docker compose --profile bot up -d --build
+            docker-compose --profile bot up -d --build

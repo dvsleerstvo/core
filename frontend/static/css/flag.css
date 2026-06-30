@@ -1,0 +1,86 @@
+.flag {
+    --flag-size: 1em;
+    width: calc(var(--flag-size) * 1.5);
+    height: var(--flag-size);
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.flag-RB { background-image: url('/img/state/Flag_of_Buryatia.svg');}
+.flag-RSYA { background-image: url('/img/state/Flag_of_Komi.svg');}
+.flag-ZK { background-image: url('/img/state/Flag_of_Zabaykalsky_Krai.svg');}
+.flag-KK { background-image: url('/img/state/Flag_of_Kamchatka_Krai.svg');}
+.flag-PK { background-image: url('/img/state/Flag_of_Primorsky_Krai.svg');}
+.flag-KHK { background-image: url('/img/state/Flag_of_Khabarovsk_Krai.svg');}
+.flag-AO { background-image: url('/img/state/Flag_of_Amur_Oblast.svg');}
+.flag-MO { background-image: url('/img/state/Flag_of_Magadan_Oblast.svg');}
+.flag-SO { background-image: url('/img/state/Flag_of_Sakhalin_Oblast.svg');}
+.flag-JAO { background-image: url('/img/state/Flag_of_the_Jewish_Autonomous_Oblast.svg');}
+.flag-CHAO { background-image: url('/img/state/Flag_of_Chukotka.svg');}
+
+    .map-wrapper {
+        width: 80%;
+        max-width: 500px; /* Размер можно подогнать под себя */
+        margin: 0 auto;
+    }
+
+    #russia-far-east-map {
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0 0 20px rgba(249, 115, 22, 0.15));
+    }
+
+    /* Базовый стиль всех регионов (пустые или без очков) */
+    #russia-far-east-map path, #russia-far-east-map polygon {
+        fill: rgba(255, 255, 255, 0.03);
+        stroke: rgba(255, 255, 255, 0.2);
+        stroke-width: 1.5px;
+        transition: all 0.3s ease;
+    }
+
+    /* Эффект при наведении на любой регион */
+    #russia-far-east-map path:hover, #russia-far-east-map polygon:hover {
+        stroke: #ffffff;
+        stroke-width: 2.5px;
+        filter: brightness(1.4);
+        transform-origin: center;
+        z-index: 10;
+    }
+
+    #map-animation-wrapper {
+        max-height: 1200px; /* С запасом для больших экранов */
+        opacity: 1;
+        overflow: hidden; /* Обрезает все, что выходит за рамки при скрытии */
+        transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out;
+    }
+
+    /* Класс скрытия */
+    .map-collapsed {
+        max-height: 0 !important;
+        opacity: 0 !important;
+    }
+
+    /* Стили всплывающей подсказки (тултипа) */
+    .map-tooltip {
+        position: fixed; /* Fixed позволяет следовать за мышью поверх всего окна */
+        background: rgba(15, 23, 42, 0.95);
+        color: #fff;
+        padding: 10px 15px;
+        border-radius: 8px;
+        border: 1px solid rgba(249, 115, 22, 0.5);
+        pointer-events: none; /* Чтобы мышь не цеплялась за сам тултип */
+        z-index: 9999;
+        font-size: 0.9rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+    }
+
+    #russia-far-east-map path.active-region,
+    #russia-far-east-map polygon.active-region {
+        stroke: #ffffff !important;
+        stroke-width: 3px !important;
+        filter: brightness(1.6);
+        fill: var(--primary) !important; /* Делает его ярко-оранжевым */
+    }

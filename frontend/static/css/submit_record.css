@@ -1,0 +1,99 @@
+.form-control, .form-select {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid var(--card-border) !important;
+    color: #fff !important;
+    border-radius: 12px;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 15px rgba(249, 115, 22, 0.2) !important;
+}
+
+.form-label {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* --- Стилизация Select2 под дизайн сайта --- */
+.select2-container--default .select2-selection--single {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid var(--card-border) !important;
+    border-radius: 12px !important;
+    height: 50px !important; /* Увеличенная высота */
+    transition: all 0.3s ease;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 15px rgba(249, 115, 22, 0.2) !important;
+}
+
+/* Текст выбранного пункта */
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #fff !important;
+    line-height: 48px !important; /* Идеальное центрирование по вертикали */
+    padding-left: 15px !important;
+    padding-right: 40px !important; /* Место под крестик и стрелку */
+}
+
+/* Стрелочка */
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 48px !important;
+    right: 10px !important;
+}
+
+/* ИСПРАВЛЕННЫЙ КРЕСТИК (СБРОС ВЫБОРА) */
+.select2-container--default .select2-selection--single .select2-selection__clear {
+    height: 48px !important;
+    line-height: 48px !important; /* Центрируем по вертикали */
+    float: right;
+    margin-right: 25px !important; /* Отодвигаем от стрелочки */
+    color: var(--text-muted) !important;
+    font-size: 1.5rem;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__clear:hover {
+    color: #dc3545 !important; /* Краснеет при наведении */
+}
+
+/* Выпадающее меню поиска */
+.select2-dropdown {
+    background-color: #292524 !important; /* Stone 800 */
+    border: 1px solid var(--primary) !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid var(--card-border) !important;
+    color: #fff !important;
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+.select2-results__option {
+    color: #fff !important;
+    padding: 10px 15px !important;
+    transition: background 0.2s;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background: linear-gradient(135deg, var(--primary), var(--accent)) !important;
+    color: white !important;
+}
+
+.select2-container--default .select2-results__option--selected {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}

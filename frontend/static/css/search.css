@@ -1,0 +1,8 @@
+.search-container:focus-within {
+    box-shadow: 0 0 15px rgba(249, 115, 22, 0.2) !important;
+    border-color: #f97316 !important;
+}
+
+.search-container input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}

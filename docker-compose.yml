@@ -1,0 +1,81 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:17-alpine
+    container_name: django_postgres_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    env_file:
+      - .env
+    networks:
+      - dvsleerstvo_network
+
+  redis:
+    image: redis:7-alpine
+    container_name: dvsleerstvo_redis
+    networks:
+      - dvsleerstvo_network
+
+  web:
+    build: .
+    container_name: django_app_web
+    volumes:
+      - .:/app
+      - /app/frontend/
+      - static_volume:/app/staticfiles
+    env_file:
+      - .env
+    depends_on:
+      - db
+      - redis
+    networks:
+      - dvsleerstvo_network
+
+  frontend:
+    build: ./frontend
+    container_name: svelte_app_frontend
+    env_file:
+      - .env
+    depends_on:
+      - web
+    networks:
+      - dvsleerstvo_network
+
+  discordbot:
+    build: ./discordbot
+    container_name: dvsleerstvo_discord_bot
+    profiles:
+      - bot
+    restart: always
+    volumes:
+      - ./discordbot:/app
+    env_file:
+      - .env
+    depends_on:
+      - web
+    networks:
+      - dvsleerstvo_network
+
+  nginx:
+    image: nginx:stable-alpine
+    container_name: dvsleerstvo_nginx
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - static_volume:/app/staticfiles:ro
+    depends_on:
+      - web
+      - frontend
+    networks:
+      - dvsleerstvo_network
+      - proxy-networks
+
+volumes:
+  postgres_data:
+  static_volume:
+
+networks:
+  dvsleerstvo_network:
+    driver: bridge
+  proxy-networks:
+    external: true

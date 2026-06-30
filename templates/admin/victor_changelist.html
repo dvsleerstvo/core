@@ -1,0 +1,34 @@
+{% extends 'admin/change_list.html' %}
+
+{% block object-tools-items %}
+    {{ block.super }}
+    <div style="margin-top: 10px">
+        <a class="button" href="{% url 'admin:add-victors-all' %}">Добавить прохождения всех игроков</a>
+    </div>
+    <div style="margin-top: 20px; margin-bottom: 10px">
+        <input type="text" id="playerNameInput" placeholder="Имя игрока">
+    </div>
+    <div>
+        <a class="button" href="#" id="addVictorLink">Добавить прохождения игрока</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const playerNameInput = document.getElementById('playerNameInput');
+            const addVictorLink = document.getElementById('addVictorLink');
+
+            addVictorLink.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                const playerName = playerNameInput.value;
+                if (playerName) {
+                    const encodedPlayerName = encodeURIComponent(playerName);
+                    const newUrl = "{% url 'admin:add-victors' 'PLACEHOLDER' %}".replace('PLACEHOLDER', encodedPlayerName);
+                    window.location.href = newUrl;
+                } else {
+                    alert('Пожалуйста, введите имя игрока.');
+                }
+            });
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,126 @@
+.region-tabs .nav-link {
+    color: var(--text-muted);
+    border: 1px solid rgba(249, 115, 22, 0.2);
+    transition: all 0.2s ease;
+    font-weight: 600;
+}
+
+.region-tabs .nav-link.active {
+    background-color: rgba(249, 115, 22, 0.1);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.region-tabs .nav-link:hover:not(.active) {
+    border-color: rgba(249, 115, 22, 0.5);
+    color: var(--text-main);
+}
+
+.pill-player-name {
+    font-size: 0.8em;
+    opacity: 0.6;
+    margin-left: 4px;
+}
+
+.custom-leaderboard-table {
+    --bs-table-bg: transparent !important;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    background: transparent !important;
+}
+
+.custom-leaderboard-table thead th {
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    padding-bottom: 15px;
+    background: transparent !important;
+}
+
+.leaderboard-row {
+    background: rgba(255, 255, 255, 0.02) !important;
+    transition: transform 0.2s ease, background 0.2s;
+}
+
+.leaderboard-row:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+    transform: scale(1.005);
+}
+
+.leaderboard-row td {
+    background: transparent !important;
+    border: none !important;
+    padding: 12px 20px !important;
+    color: var(--text-main);
+}
+
+.leaderboard-row td:first-child {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.leaderboard-row td:last-child {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.rank-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+
+.gold {
+    background: linear-gradient(135deg, #ffd700, #b8860b);
+    color: #000;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.silver {
+    background: linear-gradient(135deg, #c0c0c0, #708090);
+    color: #000;
+}
+
+.bronze {
+    background: linear-gradient(135deg, #cd7f32, #8b4513);
+    color: #000;
+}
+
+.rank-number {
+    font-weight: 600;
+    opacity: 0.4;
+    font-size: 0.9rem;
+}
+
+.top-player-row {
+    background: rgba(249, 115, 22, 0.05) !important;
+    border: 1px solid rgba(249, 115, 22, 0.1) !important;
+}
+
+.player-name-link {
+    color: var(--text-main);
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+}
+
+.player-name-link:hover {
+    color: var(--primary) !important;
+    text-shadow: 0 0 10px rgba(249, 115, 22, 0.4);
+}
+
+.score-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(249, 115, 22, 0.1);
+    border: 1px solid rgba(249, 115, 22, 0.2);
+    border-radius: 10px;
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 1rem;
+}

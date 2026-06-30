@@ -1,0 +1,64 @@
+[project]
+name = "core"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "django>=5.2.4",
+    "django-redis",
+    "django-environ>=0.12.0",
+    "gunicorn>=23.0.0",
+    "psycopg>=3.2.9",
+    "pylint-django==2.6.1",
+    "requests>=2.32.4",
+    "httpx",
+    "django-dbbackup>=5.1.1",
+    "boto3>=1.42.26",
+    "django-storages>=1.14.6",
+    "django-allauth>=65.14.3",
+    "django-unfold>=0.82.0",
+    "djangorestframework>=3.17.1",
+    "django-cors-headers>=4.9.0",
+    "ruff>=0.15.20",
+]
+
+[tool.pylint.master]
+load-plugins = ["pylint_django"]
+
+[tool.pylint.pylint_django]
+django-settings-module='core.settings'
+
+[tool.pylint]
+ignore = [
+    ".venv",
+    "tests",
+    "docs",
+    "migrations"
+]
+jobs = 0
+
+disable = [
+    "C0114",
+    "C0116",
+    "R0903",
+    "W0613",
+    "W0703",
+]
+
+[tool.pylint.format]
+max-line-length = 79
+indent-string = "    "
+
+[tool.pylint.design]
+max-arguments = 7
+max-locals = 15
+max-statements = 50
+max-nested-blocks = 5
+
+[tool.pylint.miscellaneous]
+notes = ["FIXME", "XXX", "TODO"]
+
+[tool.uv.workspace]
+members = [
+    "fastapi dvsleerstvo",
+]

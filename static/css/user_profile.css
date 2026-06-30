@@ -1,0 +1,59 @@
+.profile-header {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+    background: #111;
+    border-radius: 12px;
+}
+
+
+
+.fw-800 {
+    font-weight: 800;
+}
+
+.record-section {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--card-border);
+    transition: var(--transition);
+}
+
+.record-section:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(249, 115, 22, 0.3);
+}
+
+.record-subtitle {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #10b981;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.record-pill {
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none !important; /* Убираем подчеркивание */
+    transition: all 0.2s ease;
+}
+
+.record-pill.completed:hover {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: #10b981;
+    color: #10b981 !important;
+    transform: translateY(-2px);
+}
+
+.record-pill.progress-tag:hover {
+    background: rgba(251, 191, 36, 0.1);
+    border-color: var(--accent);
+    color: var(--accent) !important;
+    transform: translateY(-2px);
+}

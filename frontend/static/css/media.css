@@ -1,0 +1,82 @@
+@media (max-width: 768px) {
+    body { padding-top: 80px; }
+    .container { padding-left: 15px; padding-right: 15px; }
+
+    .search-container {
+        border-radius: 10px !important;
+    }
+    .search-container input {
+        font-size: 16px;
+        padding: 12px 10px;
+    }
+    .search-container button {
+        padding: 10px 15px !important;
+        font-size: 0.9rem;
+    }
+
+    .level-list { gap: 12px; }
+    .level-card {
+        flex-direction: column;
+        align-items: stretch;
+        border-radius: 12px;
+    }
+    .level-img {
+        width: 100%;
+        min-width: unset;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+    .level-info { padding: 15px; width: 100%; }
+    .level-title h5 { font-size: 1.15rem; }
+    .level-details { font-size: 0.85rem; margin-bottom: 10px; }
+
+    .level-card:hover { transform: none; box-shadow: none; background: var(--card-bg); }
+    .level-card:active { transform: scale(0.98); background: rgba(68, 64, 60, 0.8); border-color: var(--accent); }
+
+    .display-4 { font-size: 2rem !important; }
+    .flag { --flag-size: 1.5rem !important; }
+
+    .row.g-4 { gap: 10px !important; }
+    .col-6.col-md-3 { padding: 0 5px; }
+
+    .stat-card {
+        padding: 15px 10px !important;
+        border-radius: 12px;
+    }
+    .stat-card h3 { font-size: 1.4rem; margin-top: 5px; margin-bottom: 0; }
+    .stat-card span { font-size: 0.75rem; letter-spacing: 0.5px; }
+
+    .record-section {
+        padding: 15px !important;
+        border-radius: 12px !important;
+    }
+    .record-section h4 { font-size: 1.1rem; }
+    .record-section h4 .badge { font-size: 0.75rem !important; }
+    .record-subtitle { font-size: 0.9rem; margin-bottom: 10px; }
+
+    .record-pill {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .custom-leaderboard-table { border-spacing: 0 8px; }
+    .leaderboard-row td {
+        padding: 12px 10px !important;
+        font-size: 0.85rem;
+    }
+    .leaderboard-row td:first-child { font-size: 0.9rem; }
+
+    .score-badge {
+        padding: 4px 10px;
+        font-size: 0.85rem;
+        border-radius: 6px;
+    }
+
+    .badge.rounded-pill {
+        padding: 6px 10px !important;
+        font-size: 0.75rem;
+        white-space: normal;
+        text-align: center;
+        display: inline-block;
+    }
+}

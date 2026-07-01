@@ -20,5 +20,5 @@ jobs:
           script: |
             cd /root/core
             git pull
-            docker system prune -af --volumes
+            docker system prune -af
             docker-compose --profile bot up -d --build
